@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="regexr" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOW-S9-fSw" customClass="GIDSignInButton">
+                                <rect key="frame" x="248" y="280" width="104" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Use Your Google Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awe-3r-2wG">
+                                <rect key="frame" x="197" y="251" width="206" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3wv-DW-2lm">
+                                <rect key="frame" x="260" y="28" width="80" height="43"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzI-kH-gMD">
+                                <rect key="frame" x="280" y="30" width="40" height="40"/>
+                                <state key="normal" title="Profile Pic Button">
+                                    <color key="titleColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="profilePicPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wiB-7d-hgi"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="keI-8m-1Ov">
+                                <rect key="frame" x="20" y="0.0" width="560" height="513"/>
+                                <state key="normal" title="Cancel Sign Out Button">
+                                    <color key="titleColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="0.0" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelSignOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iiz-pU-aGD"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvh-Jd-ewM">
+                                <rect key="frame" x="20" y="521" width="560" height="59"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="X9s-9F-V0L"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="n5P-te-FfC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <color key="tintColor" red="0.011764705882352941" green="0.66274509803921566" blue="0.95686274509803915" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lvY-XU-IT9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="keI-8m-1Ov" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="0lo-ul-2z9"/>
+                            <constraint firstItem="OzI-kH-gMD" firstAttribute="centerY" secondItem="3wv-DW-2lm" secondAttribute="centerY" id="7uY-NI-Qf3"/>
+                            <constraint firstItem="Yvh-Jd-ewM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B7I-wG-fFw"/>
+                            <constraint firstItem="pOW-S9-fSw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lrm-Dl-V9O"/>
+                            <constraint firstItem="pOW-S9-fSw" firstAttribute="top" secondItem="awe-3r-2wG" secondAttribute="bottom" constant="8" id="O03-GI-Jz1"/>
+                            <constraint firstItem="keI-8m-1Ov" firstAttribute="centerX" secondItem="Yvh-Jd-ewM" secondAttribute="centerX" id="T4d-ae-7hB"/>
+                            <constraint firstItem="OzI-kH-gMD" firstAttribute="centerX" secondItem="3wv-DW-2lm" secondAttribute="centerX" id="UKj-Ju-YKw"/>
+                            <constraint firstItem="3wv-DW-2lm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XEb-15-IoM"/>
+                            <constraint firstItem="awe-3r-2wG" firstAttribute="centerX" secondItem="pOW-S9-fSw" secondAttribute="centerX" id="e2i-zR-1aP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yvh-Jd-ewM" secondAttribute="bottom" constant="20" id="eJF-Qu-v0O"/>
+                            <constraint firstItem="keI-8m-1Ov" firstAttribute="width" secondItem="Yvh-Jd-ewM" secondAttribute="width" id="hGG-SQ-taX"/>
+                            <constraint firstItem="pOW-S9-fSw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hHq-4J-FcY"/>
+                            <constraint firstItem="3wv-DW-2lm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="l57-LZ-t0W"/>
+                            <constraint firstItem="Yvh-Jd-ewM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="mr8-bu-Wst"/>
+                            <constraint firstItem="Yvh-Jd-ewM" firstAttribute="top" secondItem="keI-8m-1Ov" secondAttribute="bottom" constant="1" id="r6Q-mr-2OZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelSignOutButton" destination="keI-8m-1Ov" id="xAd-t7-sR4"/>
+                        <outlet property="profilePic" destination="3wv-DW-2lm" id="T0p-pk-KlR"/>
+                        <outlet property="profilePicButton" destination="OzI-kH-gMD" id="TiX-yq-Bag"/>
+                        <outlet property="signInButton" destination="pOW-S9-fSw" id="Q5R-oQ-ra2"/>
+                        <outlet property="signInLabel" destination="awe-3r-2wG" id="euN-KV-9Lo"/>
+                        <outlet property="signOutButton" destination="Yvh-Jd-ewM" id="XdR-jI-joy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="323" y="918"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Js3-1y-bXj">
+            <objects>
+                <viewController id="rxc-J8-puc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cHc-0w-qiT"/>
+                        <viewControllerLayoutGuide type="bottom" id="fNi-iC-j1f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iVX-2M-O2Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7N2-sC-ESC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="918"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="5sY-EX-7El">
+            <objects>
+                <viewController id="0Hh-b4-AXW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="chu-DW-x1f"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qkq-gF-vc0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYJ-LQ-Opl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="86F-jM-Rck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
